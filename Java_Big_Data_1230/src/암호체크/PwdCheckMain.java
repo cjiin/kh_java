@@ -10,13 +10,21 @@ import java.util.Scanner;
 // 반복문을 사용하고 사용자가 "종료" 또는 "exit"를 입력하면 프로그램 종료
 public class PwdCheckMain {
     public static void main(String[] args) {
-
-
+        Scanner sc = new Scanner(System.in);
+        PwdCheck pwdCheck = new PwdCheck();
+        String pwd; // 암호를 입력 받는 변수 생성
         while (true) {
-            Scanner sc = new Scanner(System.in);
-            String pwd = sc.next();
-            if (pwd.equalsIgnoreCase("exit")) ;
-            break;
+            System.out.print("암호 입력 : ");
+            pwd = sc.next();
+
+            if (pwd.equals("종료")|| pwd.equalsIgnoreCase("exit"))  break;
+
+
+            if(pwdCheck.validLength(pwd)==false){
+                System.out.println("Bad Length password");
+                continue;
+            }
+
         }
     }
 }
