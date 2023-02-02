@@ -1,6 +1,5 @@
 package 숫자의합;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 // 문제 : N개의 숫자가 공백 없이 쓰여 있음. 이 숫자를 모두 합해서 출력하는 문제
