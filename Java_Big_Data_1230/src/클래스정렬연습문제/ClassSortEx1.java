@@ -27,6 +27,7 @@ public class ClassSortEx1 {
         System.out.print("학생 수 입력 : ");
         int cnt = sc.nextInt();
         int grade = 0;
+        int preScore =0; //이전 점수
         for (int i = 0; i < cnt; i++) { //입력 받은 학생 수 만큼 순회
             ts.add(new StudentInfo(sc.next(), sc.nextInt(), sc.nextLine()));
         }
@@ -34,10 +35,12 @@ public class ClassSortEx1 {
         System.out.println("---------------------");
         System.out.println("석차  성적   이름   학번 ");
         for (StudentInfo e : ts) {
-            System.out.printf("%d%6d%6s%7s\n", ++grade,e.score, e.name,e.number);
+            if (preScore != e.score) grade++;
+            System.out.printf("%2d%6d%5s%5s\n", grade, e.score, e.name, e.number);
+            preScore = e.score; //현재 점수를 (이전석차) 변수에 저장함
+        }
         System.out.println("---------------------");
 
 
-    }
 }
 }
