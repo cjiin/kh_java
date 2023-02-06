@@ -30,9 +30,9 @@ public class ThreadEx7 {
 }
 
 class SharedValue {
-    private int value = 0;
+    private int value = 0; // private 으로 해야 동기화가 의미 있다.
 
-    public int getValue() {
+    public int getValue() { //value를 확인함
         return value;
     }
 
