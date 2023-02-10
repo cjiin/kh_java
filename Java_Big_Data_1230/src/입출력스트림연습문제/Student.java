@@ -6,7 +6,6 @@ public class Student implements Comparable<Student>{
     private int eng;
     private int mat;
 
-
     public Student(String name, int kor, int eng, int mat) {
         this.name = name;
         this.kor = kor;
